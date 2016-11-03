@@ -6,6 +6,6 @@ Contributors: Robert England, Jose Perez, Elizabeth Duong, Maria Lalata, Nichola
 Project Name: Whack-An-LED
 
 Project Description: Implement whack-a-mole on a the Altera board using the Verilog hardware description language. 
+					 Buttons will be pressed when the LED above it lights up. The sequence of these LEDS will be random. 
 
 Modules Created: 
-
