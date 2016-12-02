@@ -9,3 +9,4 @@ Project Description: Implement whack-a-mole on a the Altera board using the Veri
 
 Modules Created: 
 
+Jose Typed Here
