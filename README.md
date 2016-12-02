@@ -9,3 +9,5 @@ Project Description: Implement whack-a-mole on a the Altera board using the Veri
 					 Buttons will be pressed when the LED above it lights up. The sequence of these LEDS will be random. 
 
 Modules Created: 
+				GameController.v
+				PointsObtained.v
