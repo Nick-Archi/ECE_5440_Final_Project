@@ -1,6 +1,6 @@
-module Scorescoreer(PointRecieved, valid, score, Clk, Rst);
+module Scorescoreer(PointReceived, valid, score, Clk, Rst);
 
-	input PointRecieved;
+	input PointReceived;
 	input Clk, Rst, valid;
 	output [4:0] score;
 
@@ -12,7 +12,7 @@ module Scorescoreer(PointRecieved, valid, score, Clk, Rst);
 		begin
 			score <= 4'b0000;
 		end
-		else if(PointRecieved == 1)
+		else if(PointReceived == 1)
 		begin
 			if(valid == 1) begin
 			score <= score + 1;
