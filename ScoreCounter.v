@@ -1,7 +1,7 @@
 module Scorescoreer(PointRecieved, valid, score, Clk, Rst);
 
 	input PointRecieved;
-	input Clk, Rst;
+	input Clk, Rst, valid;
 	output [4:0] score;
 
 	reg [3:0] score;
