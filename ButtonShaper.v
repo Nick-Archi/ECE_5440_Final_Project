@@ -14,28 +14,28 @@ module ButtonShaper(Button, B_Out, Clock, Reset);
         else begin
             case(State)
                 S_On0: begin		
-				            B_out <= 0;
-				            if (Button == 0) begin
-					              State <= S_On1;
-                    end
-				            else begin
-					              State <= S_On0;
-			              end
+	    		B_out <= 0;
+	    		if (Button == 0) begin
+	     			State <= S_On1;
+                    	end
+	                else begin			  
+	     			State <= S_On0;
+		        end
                 end
                 
                 S_On1: begin
-                    B_Out <= 1;
-                    State <= S_On2;
+                	B_Out <= 1;
+                    	State <= S_On2;
                 end
                 
                 S_On2: begin
-                    B_Out <= 0;
-                    if (Button == 0) begin
-                        State <= S_On0;
-                    end
-                    else begin
-                        State <= S_On2;
-                    end
+                    	B_Out <= 0;
+                    	if (Button == 0) begin
+                        	State <= S_On0;
+                    	end
+                    	else begin
+                        	State <= S_On2;
+                    	end
                 end
             endcase
         end
