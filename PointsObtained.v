@@ -1,8 +1,8 @@
-module PointsObtained(b1, b2, b3, LED, Point, clk, rst);
+module PointsObtained(b1, b2, b3, LED, Point, valid, clk, rst);
 	input b1, b2, b3, clk, rst;
 	input [2:0] LED;
 	
-	output reg Point; //load to counter
+	output reg valid, Point; //load to counter
 
 	parameter s0 = 0, s1= 1, s2 = 2;
 	
@@ -12,28 +12,45 @@ module PointsObtained(b1, b2, b3, LED, Point, clk, rst);
 		if(rst == 0) begin
 			Point <= 0;
 			state <= s0;
+			valid <= 0;
 		end
 		else begin
 		case(state)
 		
 		s0: begin
 				if(LED[0] == b1) begin
-				Point <= 1;
+					Point <= 1;
+					valid <= 1;
+				end
+				else begin
+					Point<= 0;
+					valid <= 1;
 				end
 				state <= s1;
 			end
 		s1: begin
 				if(LED[1] == b2) begin
-				Point <= 1;
+					Point <= 1;
+					valid <= 1;
+				end
+				else begin
+					Point<= 0;
+					valid <= 1;
 				end
 				state <= s2;
 			end
 		s2: begin
 				if(LED[2] == b3) begin
-				Point <= 1;
+					Point <= 1;
+					valid <= 1;
 				end
+				else begin
+					Point<= 0;
+					valid <= 1;
+					end
 			end
 		default: begin
+				valid <= 0;
 				state <= s0;
 				Point <= 0;
 			end
