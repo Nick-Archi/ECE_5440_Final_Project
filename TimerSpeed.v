@@ -35,7 +35,7 @@ module TimerSpeed(level, ready, gameSpeed, control, clk, rst);
 	/* reg
 	*	
 	*/	
-	reg state;
+	reg[1:0] state;
 	
 	/* parameter
 	*
