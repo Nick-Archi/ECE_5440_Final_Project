@@ -4,7 +4,9 @@
 *	using two toggle switches from the board. 
 *	Then in the board we switched them based on their binary bits which are 
 *	00 = Normal, 01 = Intermediate 10 = Advanced. 
-*	The description of each level is shown above under “interfaces.” 
+*	The description of each level is shown above under “interfaces”. 
+*	The control flag will not allow any changes to be seen by the 
+*	RandomNum module until the User is fine with their selection.   
 *
 *	Created By: Jose 
 *	Last Edited: Nicholas 
