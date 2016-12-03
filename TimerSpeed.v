@@ -26,7 +26,8 @@ module TimerSpeed(level, ready, gameSpeed, control, clk, rst);
 	
 	/* outputs/reg
 	*	gameSpeed = selects the gameSpeed for the timer
-	*	control = is turned to a 1 to indicate to the timer that the selection is ready
+	*	control = is turned to a 1 to indicate to the timer that the selection is ready 
+	*		no selections will be seen by RandomNum till control is 1
 	*/
 	output reg[1:0] gameSpeed; 
 	output reg control;
