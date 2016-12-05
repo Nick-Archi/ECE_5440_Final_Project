@@ -1,8 +1,8 @@
-module Scorescoreer(PointReceived, valid, score, Clk, Rst);
+module ScoreCounter(PointReceived, valid, score, Clk, Rst);
 
-	input PointReceived;
+	input PointRecieved;
 	input Clk, Rst, valid;
-	output [4:0] score;
+	output [3:0] score;
 
 	reg [3:0] score;
 	initial score <= 4'b0000;
