@@ -9,7 +9,7 @@
 *
 */
 
-module UserSelect(toggle, flag, clk, rst);
+module UserSelect(toggle, ready, clk, rst);
 
 	/* inputs
 	*	toggle = switch that determines if the user is a guest or not
@@ -17,10 +17,10 @@ module UserSelect(toggle, flag, clk, rst);
 	input toggle, clk, rst;
 	
 	/* outputs/reg
-	*	flag = notifies the other modules of the decision made by the user
-	* 	flag == 1 if the user wants to enter a password
+	*	ready = notifies the other modules of the decision made by the user
+	* 	ready == 1 if the user wants to enter a password
 	*/
-	output reg flag;
+	output reg ready;
 
 	/* reg
 	*	
@@ -37,11 +37,11 @@ module UserSelect(toggle, flag, clk, rst);
 		if(rst == 0) begin
 		
 			if(toggle == 1) begin
-				flag <= 1;	
+				ready <= 1;	
 			end // end of toggle if
 			
 			else begin
-				flag <= 0;
+				ready <= 0;
 			end
 			
 		end // end of rst if
@@ -53,12 +53,12 @@ module UserSelect(toggle, flag, clk, rst);
 			case(state)
 				
 				sWait: begin
-					flag <= flag;
+					ready <= ready;
 					state <= sWait;
 				end
 				
 				default: begin
-					flag <= flag;
+					ready <= ready;
 					state <= sWait;
 				end
 					
