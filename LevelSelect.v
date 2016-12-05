@@ -1,4 +1,4 @@
-/* 	Module: TimerSpeed
+/* 	Module: LevelSelect
 *
 * 	Description: Manipulates the speed of the game from each level by 
 *	using two toggle switches from the board. 
@@ -16,11 +16,11 @@
 /*
 *
 */
-module TimerSpeed(level, ready, gameSpeed, control, clk, rst);
+module LevelSelect(level, ready, gameSpeed, control, clk, rst);
 
 	/* inputs
 	*	level = selection from the toggle switches
-	*	ready = selection from a toggle switch to indicate user is fine with their options
+	*	ready = selection from a toggle switch to indicate user is fine with their options * it's the flag signal from the UserSelect module
 	*/
 	input[1:0] level; 
 	input clk, rst;
@@ -28,7 +28,7 @@ module TimerSpeed(level, ready, gameSpeed, control, clk, rst);
 	
 	/* outputs/reg
 	*	gameSpeed = selects the gameSpeed for the timer
-	*	control = is turned to a 1 to indicate to the timer that the selection is ready 
+	*	control = is turned to a 1 to indicate that the selection is ready 
 	*		no selections will be seen by RandomNum till control is 1
 	*/
 	output reg[1:0] gameSpeed; 
