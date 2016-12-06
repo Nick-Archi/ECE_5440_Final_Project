@@ -114,15 +114,15 @@ module CheckUser(user, load, speed, userLog, clk, rst);
 				s2: begin
 					case(verify)
 						
-						4'b0000: begin // normal
+						1: begin // normal
 							speed <= 2'b00;
 						end
 						
-						4'b0001: begin // intermediate
+						2: begin // intermediate
 							speed <= 2'b01;
 						end
 
-						4'b0011: begin // advanced
+						3: begin // advanced
 							speed <= 2'b10;
 						end
 

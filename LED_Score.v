@@ -62,6 +62,7 @@ module LED_Score(change, start, bIN1, bIN2, bIN3, randNum, clk, rst, led1, led2,
 					end
 				end
 				Stop: begin
+					led1 <= 0; led2 <= 0; led3 <= 0;
 					if(start==1)begin
 						score <= 0;
 						led1 <= 0; led2 <= 0; led3 <= 0;
