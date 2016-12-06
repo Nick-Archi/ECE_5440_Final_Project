@@ -62,7 +62,7 @@ module GameController(rst,clk,bIn1,bIn2,bIn3,userLog,stopIn,userLoad,startGame,b
 					
 				end
 				stop: begin
-					if(bIn1==1)begin//button 1 press sends back to waitStart to play again
+					if(bIn1==1)begin//button 1 press sends back to waitStart to play again as same user
 						state<=waitStart;
 					end
 				end
