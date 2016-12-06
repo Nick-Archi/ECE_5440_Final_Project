@@ -11,12 +11,12 @@ module split7seg(wholeNum, rightDigit, leftDigit);
 	/* inputs
 	*	
 	*/	
-	input[0:6] wholeNum;
+	input[6:0] wholeNum;
 	
 	/* output reg
 	*	
 	*/
-	output reg[0:3] rightDigit, leftDigit;
+	output reg[3:0] rightDigit, leftDigit;
 	
 	always@(wholeNum) begin
 	
