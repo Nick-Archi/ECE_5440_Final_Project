@@ -39,24 +39,24 @@ module GameController(rst,clk,bIn1,bIn2,bIn3,userLog,stopIn,userLoad,startGame,b
 					end
 					else begin 
 						if(bIn1==1)begin//if button 1 pressed, bOut1 high else low
-							bOut1=1;
+							bOut1<=1;
 						end
 						else begin
-							bOut1=0;
+							bOut1<=0;
 						end
 						
 						if(bIn2==1)begin//if button 2 pressed, bOut2 high else low
-							bOut2=1;
+							bOut2<=1;
 						end
 						else begin
-							bOut2=0;
+							bOut2<=0;
 						end
 						
 						if(bIn3==1)begin//if button 3 pressed, bOut3 high else low
-							bOut3=1;
+							bOut3<=1;
 						end
 						else begin
-							bOut3=0;
+							bOut3<=0;
 						end
 					end
 					
