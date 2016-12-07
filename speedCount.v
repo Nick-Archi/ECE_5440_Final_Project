@@ -32,11 +32,11 @@ module speedCount(rst, clk,enable,speed,ms100,timeout);
 					else begin
 						case(speed)
 							speed1:
-								countset<=15; //1.5 sec
+								countset<=10; //1.5 sec
 							speed2:
-								countset<=10; //1 sec
+								countset<=7; //1 sec
 							speed3:
-								countset<=5; //.5 sec
+								countset<=4; //.5 sec
 							default:
 								countset<=15; //1.5 sec
 						endcase
