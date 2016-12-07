@@ -1,5 +1,5 @@
-module LED_Score(change, start, bIN1, bIN2, bIN3, randNum, clk, rst, led1, led2, led3, score);
-	input change, start, bIN1, bIN2, bIN3, clk, rst;
+module LED_Score(change, start, bIn1, bIn2, bIn3, randNum, clk, rst, led1, led2, led3, score);
+	input change, start, bIn1, bIn2, bIn3, clk, rst;
 	input [1:0] randNum; //there will be three LED's, therefore we only need 2 bits from the randomLFSR
 	output reg led1, led2, led3;
 	output reg [6:0] score;
@@ -47,15 +47,15 @@ module LED_Score(change, start, bIN1, bIN2, bIN3, randNum, clk, rst, led1, led2,
 							endcase
 						end	
 						
-						if(bIN1 == 1 && led1 == 1) begin
+						if(bIn1 == 1 && led1 == 1) begin
 							led1 <= 0;
 							score <= score + 1;
 						end
-						if(bIN2 == 1 && led2 == 1) begin
+						if(bIn2 == 1 && led2 == 1) begin
 							led2 <= 0;
 							score <= score + 1;
 						end
-						if(bIN3 == 1 && led3 == 1) begin
+						if(bIn3 == 1 && led3 == 1) begin
 							led3 <= 0;
 							score <= score + 1;
 						end

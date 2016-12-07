@@ -1,6 +1,6 @@
-module RandomNumGen(q,clk,reset);
+module RandomNumGen(randOut,clk,reset);
 	input clk,reset;
-	output reg[1:0] q;
+	output reg[1:0] randOut;
 	reg[6:0] LFSR;
 	reg time_out;
 	
@@ -15,10 +15,10 @@ module RandomNumGen(q,clk,reset);
 				LFSR[0] <= LFSR[2] ^ LFSR[4] ^ LFSR[6];
 				LFSR[6:1] <= LFSR[5:0];
 				if(LFSR[1:0]==2'b11) begin
-					q<={1'b0,LFSR[0]};
+					randOut<={1'b0,LFSR[0]};
 				end
 				else begin
-					q<=LFSR[1:0];
+					randOut<=LFSR[1:0];
 				end
 				if(LFSR==8) begin
 					time_out<=1;
@@ -31,5 +31,5 @@ module RandomNumGen(q,clk,reset);
 		end
 	end
 
-  //assign q = LFSR;
+  //assign randOut = LFSR;
 endmodule
