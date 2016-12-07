@@ -27,22 +27,16 @@ module TimerCountDown(clk, rst, enable, ms100, timeOut, stop);
 				end
 				
 				Start: begin
-					if(enable!=1) begin //if enable goes low, game stops
-						state<=stop;
-						stop<=1;
-					end
-					else begin
-						if(ms100==1)begin
-							count=count+1;
-							if(count==10)begin
-								timeOut<=timeOut-1;
-								count=0;
-							end
-							
-							if(timeOut==0)begin
-								state<=Stop;
-								stop<=1;
-							end
+					if(ms100==1)begin
+						count=count+1;
+						if(count==10)begin
+							timeOut<=timeOut-1;
+							count=0;
+						end
+						
+						if(timeOut==0)begin
+							state<=Stop;
+							stop<=1;
 						end
 					end	
 				end

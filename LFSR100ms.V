@@ -46,5 +46,10 @@ module LFSR100ms(rst, clk,enable, ms100);
 			ms100<=0;
 		end
 	end
+	else begin
+		LFSR<=1;
+		ms100<=0;
+		COUNT<=0;
+	end
   end
 endmodule
