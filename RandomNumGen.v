@@ -20,13 +20,13 @@ module RandomNumGen(randOut,clk,reset);
 				else begin
 					randOut<=LFSR[1:0];
 				end
-				if(LFSR==8) begin
-					time_out<=1;
-				end
-				if(time_out) begin
-					LFSR<=7'b0000101;
-					time_out<=0;
-				end
+				//if(LFSR==8) begin
+					//time_out<=1;
+				//end
+				//if(time_out) begin
+					//LFSR<=7'b0000101;
+					//time_out<=0;
+				//end
 			//end
 		end
 	end
