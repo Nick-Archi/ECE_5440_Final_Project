@@ -32,13 +32,13 @@ module speedCount(rst, clk,enable,speed,ms100,timeout);
 					else begin
 						case(speed)
 							speed1:
-								countset<=10; //1.5 sec
+								countset<=10; //1sec
 							speed2:
-								countset<=7; //1 sec
+								countset<=7; //.7 sec
 							speed3:
-								countset<=4; //.5 sec
+								countset<=4; //.4 sec
 							default:
-								countset<=15; //1.5 sec
+								countset<=10; //1 sec
 						endcase
 						
 						if(ms100==1)begin//checks for ms100 signal
